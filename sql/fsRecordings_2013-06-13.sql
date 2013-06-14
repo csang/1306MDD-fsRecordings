@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.5.29)
 # Database: fsRecordings
-# Generation Time: 2013-06-14 02:35:58 +0000
+# Generation Time: 2013-06-14 02:59:24 +0000
 # ************************************************************
 
 
@@ -18,6 +18,24 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+
+# Dump of table recruits
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `recruits`;
+
+CREATE TABLE `recruits` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) unsigned NOT NULL,
+  `recruited_id` int(11) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  KEY `recruited_id` (`recruited_id`),
+  CONSTRAINT `recruits_ibfk_2` FOREIGN KEY (`recruited_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `recruits_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 
 
 # Dump of table users
@@ -35,6 +53,7 @@ CREATE TABLE `users` (
   `recordings` int(11) DEFAULT NULL,
   `recruits` int(11) DEFAULT NULL,
   `likes` int(11) DEFAULT NULL,
+  `admin` tinyint(1) unsigned DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
