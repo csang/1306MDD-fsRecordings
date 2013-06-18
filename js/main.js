@@ -1,4 +1,4 @@
-(function(){
+$(function(){
 
 	// var UserList = Backbone.View.extend({
 	// 	el: ".center",
@@ -36,17 +36,15 @@
 	});
 
 	SC.get('/tracks', { q: 'dmitrimijailov' }, function(tracks) {
-	    console.log(tracks);
-	    track = tracks[0];
-
-	    SC.oEmbed(track.uri, { auto_play: false }, function(oEmbed) {
-		  console.log('oEmbed response: ' + oEmbed);
-		  //this."#center".html(oEmbed);
-		  player = eval('(' + JSON.stringify(oEmbed) + ')');
-		  console.log(player.html);
-		  document.getElementById("center").innerHTML=player.html;
-		});
-
+	    //console.log(tracks);
+	    for(var i=0, max=tracks.length; i<max; i++){
+	    	SC.oEmbed(tracks[i].uri, { auto_play: false }, function(oEmbed) {
+			  //console.log('oEmbed response: ' + oEmbed);
+			  //this."#center".html(oEmbed);
+			  player = eval('(' + JSON.stringify(oEmbed) + ')');
+			  $(".recordings").append(player.html);
+			});
+	    };
 		// SC.stream("/tracks/"+track.id, function(sound){
 		// 	console.log(sound);
 		// 	sound.play();
@@ -56,4 +54,4 @@
 
 	
 
-})();
+});

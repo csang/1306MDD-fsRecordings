@@ -1,0 +1,30 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #ececec;
+}
+
+img{
+	position: absolute;
+	width: 200px;
+	margin: 5px;
+}
+
+.login-header{
+	background-image: url("../assets/pattern/pattern_02.gif");
+	padding: 0;
+	width: 100%;
+	height: 60px;
+}
+
+#center{
+	padding: 0 20px;
+	margin: 8px;
+}
+
+button{
+	background-image: url("../assets/button/button_off.jpg");
+	width: 220px;
+	height: 45px;
+	margin: 20px;
+}
