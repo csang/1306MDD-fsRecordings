@@ -4,6 +4,32 @@ body{
 	background-color: #ececec;
 }
 
+p, label{
+	font-size: 16px;
+	font-family: "Helvetica Neue", Helvetica, Serif;
+}
+
+.forms{
+	width: 450px;
+}
+
+form div{
+	margin-top: 20px;
+}
+
+label{
+	margin-right: 200px;
+}
+
+input{
+	height: 20px;
+	width: 240px;
+	border-radius: 90px;
+	padding-left: 10px;
+	margin-top: 5px;
+	font-size: 16px;
+}
+
 img{
 	position: absolute;
 	width: 200px;
@@ -22,9 +48,48 @@ img{
 	margin: 8px;
 }
 
-button{
-	background-image: url("../assets/button/button_off.jpg");
-	width: 220px;
+.button{
+	background-image: url("../assets/button/button_off.png");
+	background-size: 260px;
+	background-position: 0px;
+	width: 260px;
 	height: 45px;
-	margin: 20px;
+	margin: 20px 0;
+	float: none;
+	font-size: 16px;
+	border-radius: 0px;
+
+}
+
+.button:active{
+	background-image: url("../assets/button/button_on.png");
+	color: #ffffff /*#e85b1f*/;
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+
+
+
+}
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+
+
+
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+
+
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+
+
 }

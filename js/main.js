@@ -24,34 +24,38 @@ $(function(){
 
 	// Backbone.history.start();
 
+	var username = "";
+
 //////////////////////////////////////////////////////////////
 	//SoundCloud API
 //////////////////////////////////////////////////////////////
 	
-	var track = "";
-	var player = {};
+	if($(".recordings")){
 
-	SC.initialize({
-	  client_id: 'a0e5078652ad46316cf33f14c367a1e2'
-	});
+		var track = "";
+		var player = {};
 
-	SC.get('/tracks', { q: 'dmitrimijailov' }, function(tracks) {
-	    //console.log(tracks);
-	    for(var i=0, max=tracks.length; i<max; i++){
-	    	SC.oEmbed(tracks[i].uri, { auto_play: false }, function(oEmbed) {
-			  //console.log('oEmbed response: ' + oEmbed);
-			  //this."#center".html(oEmbed);
-			  player = eval('(' + JSON.stringify(oEmbed) + ')');
-			  $(".recordings").append(player.html);
-			});
-	    };
-		// SC.stream("/tracks/"+track.id, function(sound){
-		// 	console.log(sound);
-		// 	sound.play();
-		// });
+		SC.initialize({
+		  client_id: 'a0e5078652ad46316cf33f14c367a1e2'
+		});
 
-	});
+		SC.get('/tracks', { q: 'dmitrimijailov' }, function(tracks) {
+		    //console.log(tracks);
+		    for(var i=0, max=tracks.length; i<max; i++){
+		    	SC.oEmbed(tracks[i].uri, { auto_play: false }, function(oEmbed) {
+				  //console.log('oEmbed response: ' + oEmbed);
+				  //this."#center".html(oEmbed);
+				  player = eval('(' + JSON.stringify(oEmbed) + ')');
+				  $(".recordings").append(player.html);
+				});
+		    };
+			// SC.stream("/tracks/"+track.id, function(sound){
+			// 	console.log(sound);
+			// 	sound.play();
+			// });
 
-	
+		});
+
+	}
 
 });
