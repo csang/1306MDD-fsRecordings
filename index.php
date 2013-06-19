@@ -1,9 +1,4 @@
 <?	
-	require_once "models/getView.php";
-	
-	$views = new getView();
-	$views->getFile("views/header.php");
-
 	if(!empty($_GET["controllers"])){
 	
 		if($_GET["controllers"] == ""){
@@ -48,6 +43,4 @@
 	}else{
 		include 'controllers/home.php';
 	}
-
-	$views->getFile("views/footer.php");
 ?>

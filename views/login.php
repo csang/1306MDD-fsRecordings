@@ -1,6 +1,7 @@
+	<h1>Welcome to fsRecordings!</h1>
 	<p>To begin we need to verify that you are a student at Full Sail University, 
 		please type down your Full Sail email and hit SEND. 
-		We will send you a code wich you need to enter after this step.</p>
+		We will send you a code wich you need to use after this step.</p>
 
 	<div class="forms">
 	<div class="email_form">
