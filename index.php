@@ -14,6 +14,10 @@
 			//session_destroy();
 			include 'controllers/login.php';	
 			
+		}elseif($_GET["controllers"] == "register"){
+			
+			include 'controllers/register.php';	
+			
 		}elseif($_GET["controllers"] == "login"){
 			
 			include 'controllers/login.php';	

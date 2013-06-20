@@ -14,8 +14,19 @@ p, label{
 	font-family: "Helvetica Neue", Helvetica, Serif;
 }
 
-.forms{
+.register_form, .login_form{
 	width: 450px;
+	float: left;
+}
+
+.register_form{
+	padding-right: 10px;
+}
+
+.login_form{
+	border-left: solid 3px #e85b1f;
+	padding: 55px 0 0 10px;
+	height: 280px;
 }
 
 form div{
@@ -77,7 +88,7 @@ header img{
 	margin: 10px 0;
 	background-image: url("../assets/pattern/pattern_03.png");
 	background-size: 75px;
-	border-left: 3px solid #e85b1f;
+	/*border-left: 3px solid #e85b1f;*/
 	border-top: 3px solid #e85b1f;
 	border-bottom: 3px solid #e85b1f;
 	border-radius: 10px;
@@ -133,7 +144,7 @@ header img{
 	margin-left: 10px;
 }
 
-.name{
+.username{
 	margin: 0;
 	padding: 10px 0 0 10px;
 	height: 35px;
