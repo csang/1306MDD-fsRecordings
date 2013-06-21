@@ -29,17 +29,39 @@ p, label{
 	height: 280px;
 }
 
+.detail_form{
+	width: 100%;
+	background-image: url("../assets/pattern/pattern_03.png");
+}
+
 form div{
 	margin-top: 20px;
 }
 
-input{
+.register_form input, .login_form input{
 	height: 20px;
 	width: 240px;
 	border-radius: 90px;
 	padding-left: 10px;
 	margin-top: 5px;
 	font-size: 16px;
+}
+
+.detail_form input{
+	width: 97%;
+	height: 30px;
+	padding-left: 10px;
+	margin: 0;
+	border: none;
+	font-size: 16px;
+	color: #eb6b46;
+	background-color: rgba(232,91,31,.0);
+}
+
+.d_input{
+	width: 100%;
+	margin: 0;
+	padding: 5px;
 }
 
 header img{
@@ -60,7 +82,7 @@ header img{
 	margin: 8px;
 }
 
-.button{
+.register_form .button, .login_form .button, .logout, .save{
 	background-image: url("../assets/button/button_off.png");
 	background-size: 260px;
 	background-position: 0px;
@@ -72,11 +94,17 @@ header img{
 	border-radius: 0px;
 }
 
-.logout{
+.logout, .save{
 	width: 120px;
 	height: 30px;
 	margin: 15px;
 	float: right;
+}
+
+.detail_form .save{
+	background-size: 100%;
+	width: 100%;
+	color: #000000;
 }
 
 .button:active{
@@ -87,7 +115,7 @@ header img{
 .card{
 	width: 100%;
 	height: 100px;
-	margin: 10px 0;
+	margin: 10px 0 0;
 	background-image: url("../assets/pattern/pattern_03.png");
 	border-top: 3px solid #e85b1f;
 	border-bottom: 3px solid #e85b1f;
@@ -111,6 +139,7 @@ header img{
 	width: 100%;
 	padding-left: 100px;
 	height: 100px;
+	border-bottom: 3px solid #e85b1f;
 }
 
 .card_info img{
@@ -167,12 +196,15 @@ header img{
 
 .recs, .recruits, .favorites{
 	float: left;
-	/*text-align: center;*/
+	padding-top: 5px;
+	text-align: center;
 	color: #eb6b46;
+	height: 45px;
 }
 
 iframe{
-	border-bottom: solid 3px #e85b1f; 
+	border-bottom: solid 3px #e85b1f;
+	margin-top: 10px; 
 }
 
 /* Large desktop */

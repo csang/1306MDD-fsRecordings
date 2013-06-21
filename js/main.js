@@ -59,6 +59,18 @@ $(function(){
 			// 	sound.play();
 			// });
 		});
+
+		$(".username").click(function(){
+			if($(".card").height() == 100){;
+				$(".card").animate({
+					height: 270,
+				}, 1000);
+			}else{
+				$(".card").animate({
+					height: 100,
+				}, 1000);
+			}
+		});
 	}
 
 });

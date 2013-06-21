@@ -13,7 +13,7 @@
 			<img src="assets/logo/logo_01.png" />
 			<? if($_SESSION["loggedin"] == 1){ ?>
 			<form method="post" enctype="multipart/form-data" action="?controllers=login&action=logout">
-				<input class="button logout" type="submit" name="send" value="Log Out"/>
+				<input class="button logout" type="submit" name="logout" value="Log Out"/>
 			</form>
 			<? }?>
 		</div>
