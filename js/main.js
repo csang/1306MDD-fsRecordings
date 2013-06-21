@@ -30,7 +30,7 @@ $(function(){
 	
 	if($(".recordings")){
 
-		var username = $(".username h3")[0].innerHTML;
+		var username = $("h3.title").html();
 		var player = {};
 		var limit = 3;
 		var favorites_count = 0;
@@ -49,7 +49,7 @@ $(function(){
 					$(".recs p")[0].innerHTML = $(".recordings")[0]["childElementCount"] + "/" + tracks.length;
 					
 				});
-				console.log(tracks[i].favoritings_count);
+				//console.log(tracks[i].favoritings_count);
 				favorites_count = tracks[i].favoritings_count + favorites_count
 				$(".favorites p")[0].innerHTML = favorites_count;
 

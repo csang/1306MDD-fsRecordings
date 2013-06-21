@@ -1,6 +1,7 @@
 <? 
 session_start();
-	require_once "models/getView.php";
+	require_once "controllers/protector.php";
+	require_once "models/getFile.php";
 	
 	$views = new getView();
 	

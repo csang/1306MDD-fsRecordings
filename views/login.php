@@ -8,8 +8,8 @@
 		We will send you a code wich you need to use after this step.</p>
 		<form method="post" enctype="multipart/form-data">
 			<div>
-				<label>Email:</label>
-				<input type="text" name="email" value="@fullsail.edu"/>
+				<label>Email:</label><br />
+				<input type="email" name="email" value="@fullsail.edu"/>
 			</div>
 			<input class="button" type="submit" name="send" value="SEND"/>
 		</form>
@@ -18,11 +18,11 @@
 	<div class="user_form">
 		<form method="post" enctype="multipart/form-data" action="?controllers=login&action=adduser">
 			<div>
-				<label>Code:</label>
-				<input type="text" name="code" placeholder="#####"/>
+				<label>Code:</label><br />
+				<input type="number" name="code" placeholder="#####"/>
 			</div>
 			<div>
-				<label>SoundCloud Username:</label>
+				<label>SoundCloud Username:</label><br />
 				<input type="text" name="r_username" placeholder="SoundCloud Username"/>
 			</div>
 			

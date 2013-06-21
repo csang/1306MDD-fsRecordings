@@ -4,9 +4,7 @@
 		</div>
 		<div class="card_info">
 			<div class="username">
-				<h3><? foreach($data as $d){
-					echo $d["username"];
-				} ?></h3>
+				<h3 class="title"><? echo $data[0]["username"]; ?></h3>
 			</div>
 			<div class="recs">
 				<p></p>
@@ -23,5 +21,11 @@
 		</div>
 	</div>
 
-	<var class="recordings">
+	<div class="detail">
+		<form method="post" enctype="multipart/form-data" action="?controllers=user&action=update">
+			<input type="text" value=<? echo $data[0]["username"]; ?> />
+		</form> 
+	</div>
+
+	<div class="recordings">
 	</div>

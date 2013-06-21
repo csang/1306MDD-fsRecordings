@@ -15,7 +15,7 @@ p, label{
 }
 
 .register_form, .login_form{
-	width: 450px;
+	width: 40%;
 	float: left;
 }
 
@@ -25,16 +25,12 @@ p, label{
 
 .login_form{
 	border-left: solid 3px #e85b1f;
-	padding: 55px 0 0 10px;
+	padding: 75px 0 0 90px;
 	height: 280px;
 }
 
 form div{
 	margin-top: 20px;
-}
-
-label{
-	margin-right: 200px;
 }
 
 input{
@@ -52,7 +48,7 @@ header img{
 	margin: 5px;
 }
 
-.login-header{
+.header{
 	background-image: url("../assets/pattern/pattern_02.gif");
 	padding: 0;
 	width: 100%;
@@ -74,7 +70,13 @@ header img{
 	float: none;
 	font-size: 16px;
 	border-radius: 0px;
+}
 
+.logout{
+	width: 120px;
+	height: 30px;
+	margin: 15px;
+	float: right;
 }
 
 .button:active{
@@ -87,8 +89,6 @@ header img{
 	height: 100px;
 	margin: 10px 0;
 	background-image: url("../assets/pattern/pattern_03.png");
-	background-size: 75px;
-	/*border-left: 3px solid #e85b1f;*/
 	border-top: 3px solid #e85b1f;
 	border-bottom: 3px solid #e85b1f;
 	border-radius: 10px;
@@ -147,9 +147,13 @@ header img{
 .username{
 	margin: 0;
 	padding: 10px 0 0 10px;
-	height: 35px;
+	height: 40px;
 /*	border-bottom: 3px dotted #e85b1f; */
 	color: #e85b1f;
+}
+
+.username:hover{
+	background-color: rgba(232,91,31,.3);
 }
 
 .recs{
@@ -162,7 +166,6 @@ header img{
 }
 
 .recs, .recruits, .favorites{
-	margin-top: 7px;
 	float: left;
 	/*text-align: center;*/
 	color: #eb6b46;
@@ -187,12 +190,25 @@ iframe{
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
 
+.login_form{
+	border-left: none;
+	float: none;
+	padding: 0;
+}
 
+.register_form, .login_form{
+	width: auto;
+	/*float: left;*/
+}
 
 }
  
 /* Landscape phones and down */
 @media (max-width: 480px) {
+
+p, label{
+	font-size: 16px;
+}
 
 header img{
 	margin: 5px 60px;
