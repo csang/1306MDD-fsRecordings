@@ -1,31 +1,7 @@
 $(function(){
 
-	// var UserList = Backbone.View.extend({
-	// 	el: ".center",
-	// 	render: function(){
-	// 		this.$el.html("<p>Hello World!</p>");
-	// 	}
-	// });
-
-	// var Router = Backbone.Router.extend({
-	// 	routes: {
-	// 		"": "home"
-	// 	}
-	// });
-
-	// var userList = new UserList();
-
-	// var router = new Router();
-
-	// router.on("route:home", function(){
-	// 	//console.log("Opened the home page");
-	// 	userList.render();
-	// });
-
-	// Backbone.history.start();
-
 //////////////////////////////////////////////////////////////
-	//SoundCloud API
+	// SoundCloud API
 //////////////////////////////////////////////////////////////
 	
 	if($(".recordings")){
@@ -59,6 +35,10 @@ $(function(){
 			// 	sound.play();
 			// });
 		});
+
+//////////////////////////////////////////////////////////////
+	// Click functions
+//////////////////////////////////////////////////////////////
 
 		$(".username").click(function(){
 			if($(".card").height() == 100){;

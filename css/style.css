@@ -178,7 +178,6 @@ header img{
 	margin: 0;
 	padding: 10px 0 0 10px;
 	height: 40px;
-/*	border-bottom: 3px dotted #e85b1f; */
 	color: #e85b1f;
 }
 
@@ -201,6 +200,12 @@ header img{
 iframe{
 	border-bottom: solid 3px #e85b1f;
 	margin-top: 10px; 
+}
+
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
 /* Large desktop */

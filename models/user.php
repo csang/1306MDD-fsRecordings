@@ -1,8 +1,7 @@
 <?
 class user{
 	
-	public function add($un = ""){
-		$db = new PDO("mysql:hostname=localhost;dbname=fsRecordings","root","root");
+	public function add($un = "", $db){ // Adds a user to the database
 		$sql = "insert into users(username) 
 							values(:un)";
 							
@@ -10,8 +9,7 @@ class user{
 		$statement->execute(array(":un"=>$un));
 	}
 
-	public function findOne($un = ""){
-		$db = new PDO("mysql:hostname=localhost;dbname=fsRecordings","root","root");
+	public function findOne($un = "", $db){ // Finds a user in the database
 		$sql = "select * from users where username = :un";
 							
 		$statement = $db->prepare($sql);
@@ -19,8 +17,7 @@ class user{
 		return $statement->fetchAll();
 	}
 
-	public function update($name = "", $email1 = "", $email2 = "", $uname = ""){
-		$db = new PDO("mysql:hostname=localhost;dbname=fsRecordings","root","root");
+	public function update($name = "", $email1 = "", $email2 = "", $uname = "", $db){ // Updates a user's info in the database
 		$sql = "update users set name = :name,
     						email = :email1,
 							email2 = :email2
@@ -31,8 +28,7 @@ class user{
 		$statement->execute(array(":name"=>$name, ":email1"=>$email1, ":email2"=>$email2, ":uname"=>$uname));
 	}
 
-	public function delete($un = ""){
-		$db = new PDO("mysql:hostname=localhost;dbname=fsRecordings","root","root");
+	public function delete($un = "", $db){ // Deletes a user from the database
 		$sql = "delete from users where username = :un";
 							
 		$statement = $db->prepare($sql);
