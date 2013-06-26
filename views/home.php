@@ -22,13 +22,13 @@
 		<div class="detail_form">
 			<form method="post" enctype="multipart/form-data" action="?controllers=user&action=update">
 				<div class="d_name d_input">
-					<input type="text" <? if(isset($data[0]["email2"])){?>value=<?echo $data[0]["name"];}else{?> placeholder="What's your name?"<? }?> />
+					<input type="text" name="name" <? if(isset($data[0]["name"])){?>value=<?echo $data[0]["name"];}else{?> placeholder="What's your name?"<? }?> />
 				</div>
 				<div class="d_email d_input">
-					<input type="text" value=<? echo $data[0]["email"]; ?> />
+					<input type="email" name="email1" value=<? echo $data[0]["email"]; ?> />
 				</div>
 				<div class="d_email d_input">
-					<input type="text" <? if(isset($data[0]["email2"])){?>value=<?echo $data[0]["email2"];}else{?> placeholder="Add another email"<? }?> />
+					<input type="email" name="email2"<? if(isset($data[0]["email2"])){?>value=<?echo $data[0]["email2"];}else{?> placeholder="Add another email"<? }?> />
 				</div>
 				<input type="submit" class="button save" value="SAVE" />
 			</form>
@@ -36,4 +36,10 @@
 	</div>
 
 	<div class="recordings">
+	</div>
+
+	<div>
+		<form method="post" enctype="multipart/form-data" action="?controllers=user&action=delete">
+			<input type="submit" class="button delete_user" value="DELETE USER" />
+		</form>
 	</div>

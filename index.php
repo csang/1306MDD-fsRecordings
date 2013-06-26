@@ -10,8 +10,7 @@
 			include 'controllers/home.php';	
 			
 		}elseif($_GET["controllers"] == "logout"){
-			//$_SESSION["loggedin"] = 0;
-			//session_destroy();
+			
 			include 'controllers/login.php';	
 			
 		}elseif($_GET["controllers"] == "register"){
@@ -22,9 +21,9 @@
 			
 			include 'controllers/login.php';	
 			
-		}elseif($_GET["controllers"] == "profile"){
-			
-			include 'controllers/profile.php';	
+		}elseif($_GET["controllers"] == "user"){
+
+			include 'controllers/user.php';	
 			
 		}elseif($_GET["controllers"] == "settings"){
 			

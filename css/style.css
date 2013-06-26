@@ -1,3 +1,4 @@
+/*General Style for every screen*/
 body{
 	margin: 0;
 	padding: 0;
@@ -185,12 +186,7 @@ header img{
 	background-color: rgba(232,91,31,.3);
 }
 
-.recs{
-	/*width: 100px;*/
-}
-
 .recruits, .favorites{
-	/*width: 75px;*/
 	border-left: solid 3px #e85b1f;
 }
 
@@ -243,8 +239,13 @@ p, label{
 }
 
 header img{
-	margin: 5px 60px;
-	/*width: 100px;*/
+	margin: 5px 100px;
+}
+
+.logout{
+	float: left;
+	width: 70px;
+	padding-left: 5px;
 }
 
 .card_info p{
