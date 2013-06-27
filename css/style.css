@@ -21,7 +21,7 @@ p, label{
 }
 
 .register_form{
-	padding-right: 10px;
+	padding: 40px 10px 0 0;
 }
 
 .login_form{
@@ -33,6 +33,10 @@ p, label{
 .detail_form{
 	width: 100%;
 	background-image: url("../assets/pattern/pattern_03.png");
+}
+
+.email_form{
+	overflow: hidden;
 }
 
 form div{
@@ -100,6 +104,11 @@ header img{
 	height: 30px;
 	margin: 15px;
 	float: right;
+}
+
+.user_form{
+	height: 0;
+	overflow: hidden;
 }
 
 .detail_form .save{
@@ -206,6 +215,20 @@ input::-webkit-inner-spin-button {
     /* display: none; <- Crashes Chrome on hover */
     -webkit-appearance: none;
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.message{
+	height: 0;
+	width: 100%;
+	background-color: #e85b1f;
+	margin: -8px 0 8px;
+	border-radius: 0 0 45px 45px;
+	text-align: center;
+	overflow: hidden;
+}
+
+.message p{
+	margin: 2px 0 0;
 }
 
 /* Large desktop */

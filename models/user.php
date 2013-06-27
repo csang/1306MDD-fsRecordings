@@ -1,12 +1,12 @@
 <?
 class user{
 	
-	public function add($un = "", $db){ // Adds a user to the database
-		$sql = "insert into users(username) 
-							values(:un)";
+	public function add($un = "", $email = "", $created = "", $userCode = "", $db){ // Adds a user to the database
+		$sql = "insert into users(username,email,created,usercode) 
+							values(:un,:email,:created,:usercode)";
 							
 		$statement = $db->prepare($sql);
-		$statement->execute(array(":un"=>$un));
+		$statement->execute(array(":un"=>$un, ":email"=>$email, ":created"=>$created, ":usercode"=>$userCode));
 	}
 
 	public function findOne($un = "", $db){ // Finds a user in the database

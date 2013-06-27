@@ -1,15 +1,15 @@
 $(function(){
-
-//////////////////////////////////////////////////////////////
-	// SoundCloud API
-//////////////////////////////////////////////////////////////
 	
-	if($(".recordings")){
+	if($("h3.title").html()){
 
 		var username = $("h3.title").html();
 		var player = {};
 		var limit = 3;
 		var favorites_count = 0;
+
+//////////////////////////////////////////////////////////////
+	// SoundCloud API
+//////////////////////////////////////////////////////////////
 
 		SC.initialize({
 		  client_id: 'a0e5078652ad46316cf33f14c367a1e2',
@@ -59,6 +59,21 @@ $(function(){
 				return false;
 			}
 		})
+
+	}else{
+		if($(".message p")[0]){
+			$(".user_form").animate({
+				height: 270,
+			}, 1000);
+
+			$(".message").animate({
+				height: 25,
+			}, 1000);
+
+			$(".email_form").animate({
+				height: 0,
+			}, 1000);
+		}
 	}
 
 });
