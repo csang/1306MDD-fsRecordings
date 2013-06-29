@@ -29,7 +29,7 @@
 				$_SESSION["email"] = $_POST["email"];
 				$_SESSION["code"] = $date->format('siHdmY');
 				$_SESSION["created"] = $date->format('Y-m-d H:i:s');
-				$data = "Your code has been sent to your Full Sail email. " . $_SESSION["code"];
+				$data = $_SESSION["code"];
 				$views->getFile("views/header.php");
 				$views->getFile("views/message.php", $data);
 				$views->getFile("views/login.php");

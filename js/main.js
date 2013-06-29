@@ -17,7 +17,7 @@ $(function(){
 		});
 
 		SC.get('/tracks', { q: username}, function(tracks) {
-		    // console.log(tracks);
+		    $(".card .ppic img").attr("src",tracks[0].user.avatar_url)
 		    for(var i=0, max=limit; i<max; i++){
 		    	SC.oEmbed(tracks[i].uri, { auto_play: false }, function(oEmbed) {
 				  

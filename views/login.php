@@ -10,7 +10,7 @@
 			<form method="post" enctype="multipart/form-data" action="?controllers=login&action=sendCode">
 				<div>
 					<label>Email:</label><br />
-					<input type="email" name="email" value="@fullsail.edu"/>
+					<input class="email_input" type="email" name="email" value="@fullsail.edu"/>
 				</div>
 				<input class="button send" type="submit" name="send" value="SEND"/>
 			</form>
