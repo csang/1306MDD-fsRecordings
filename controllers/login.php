@@ -24,9 +24,9 @@
 	if(!empty($_GET['action'])){
 
 		if($_GET["action"] == "sendCode"){
-			if(isset($_POST["email"])){
+			if(isset($_POST["email"]) && $_POST["email"] != "" && $_POST["email"] != "@fullsail.edu"){
 				$date = new DateTime();
-				$_SESSION["email"] = $_POST["email"];
+				$_SESSION["email"] = $_POST["email"]."@fullsail.edu";
 				$_SESSION["code"] = $date->format('siHdmY');
 				$_SESSION["created"] = $date->format('Y-m-d H:i:s');
 				$data = $_SESSION["code"];

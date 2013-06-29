@@ -52,6 +52,10 @@ form div{
 	font-size: 16px;
 }
 
+.register_form .email_input{
+	width: 150px;
+}
+
 .detail_form input{
 	width: 97%;
 	height: 30px;
@@ -248,7 +252,6 @@ input::-webkit-inner-spin-button {
 
 .login_form{
 	border-left: none;
-	float: none;
 	padding: 0;
 }
 
