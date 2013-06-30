@@ -45,6 +45,14 @@
 			$_SESSION["loggedin"] = 0;
 			$views->getFile("views/header.php");
 			$views->getFile("views/login.php");
+
+////////////////////////////////////////////////////////////////////////
+// === When Looking for users
+////////////////////////////////////////////////////////////////////////
+		}elseif($_GET["action"] == "userList"){ // If the user want to delete his profile
+			$data = $userModel->findAll($db);
+			$views->getFile("views/header.php");
+			$views->getFile("views/list.php", $data);
 		};
 
 	}else{

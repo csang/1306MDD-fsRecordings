@@ -20,8 +20,8 @@ class user{
 	}
 
 	// When finding a user (when user is logging in)
-	public function findAll($db){ // Finds a user in the database
-		$sql = "select username from users";
+	public function findAll($db){ // Finds all users in the database
+		$sql = "select * from users";
 							
 		$statement = $db->prepare($sql);
 		$statement->execute();

@@ -94,7 +94,7 @@ header img{
 	margin: 8px;
 }
 
-.register_form .button, .login_form .button, .logout, .save{
+.register_form .button, .login_form .button, .logout, .save, .users_button, .delete_user{
 	background-image: url("../assets/button/button_off.png");
 	background-size: 260px;
 	background-position: 0px;
@@ -118,7 +118,7 @@ header img{
 	overflow: hidden;
 }
 
-.detail_form .save{
+.detail_form .save, .users_button{
 	background-size: 100%;
 	width: 100%;
 	color: #000000;
