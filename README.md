@@ -11,3 +11,6 @@ Go to the sql folder and import the latest SQL Dump to Sequel Pro.
 
 Database name: 
 fsRecordings
+
+Video Walkthrough:
+http://youtu.be/qX-uPApS0hI
