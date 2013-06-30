@@ -23,6 +23,9 @@
 
 	if(!empty($_GET['action'])){
 
+////////////////////////////////////////////////////////////////////////
+// === When verifying student
+////////////////////////////////////////////////////////////////////////
 		if($_GET["action"] == "sendCode"){
 			if(isset($_POST["email"]) && $_POST["email"] != "" && $_POST["email"] != "@fullsail.edu"){
 				$date = new DateTime();
@@ -39,7 +42,10 @@
 				$views->getFile("views/login.php");
 			};
 
-		}else if($_GET["action"] == "adduser"){ // === When registering
+////////////////////////////////////////////////////////////////////////
+// === When registering
+////////////////////////////////////////////////////////////////////////			
+		}else if($_GET["action"] == "adduser"){ 
 			if(isset($_POST["code"],$_POST["r_username"])){
 				if($_POST["code"] == $_SESSION["code"]){
 					$userModel->add($_POST["r_username"],$_SESSION["email"],$_SESSION["created"],$_SESSION["code"],$db);
@@ -63,9 +69,13 @@
 				$views->getFile("views/header.php");
 				$views->getFile("views/login.php");	
 			}
-		}else if($_GET["action"] == "login"){ // === When loggin in
+
+////////////////////////////////////////////////////////////////////////
+// === When logging in
+////////////////////////////////////////////////////////////////////////	
+		}else if($_GET["action"] == "login"){
 			if(isset($_POST["l_username"])){
-				$data = $userModel->findOne($_POST["l_username"],$db/*,$_SESSION["email"]*/);
+				$data = $userModel->findOne($_POST["l_username"],$db);
 				if($data[0] != ""){
 					$_SESSION["loggedin"] = 1;
 					$_SESSION["user"] = $data;
@@ -80,7 +90,11 @@
 				$views->getFile("views/header.php");
 				$views->getFile("views/login.php");	
 			}
-		}else if($_GET["action"] == "logout"){ // === When loggin out
+
+////////////////////////////////////////////////////////////////////////
+// === When logging out
+////////////////////////////////////////////////////////////////////////
+		}else if($_GET["action"] == "logout"){
 			session_destroy();
 			$_SESSION["loggedin"] = 0;
 			$views->getFile("views/header.php");

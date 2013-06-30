@@ -26,7 +26,7 @@ p, label{
 
 .login_form{
 	border-left: solid 3px #e85b1f;
-	padding: 75px 0 0 90px;
+	padding: 40px 0 0 90px;
 	height: 280px;
 }
 
@@ -82,12 +82,15 @@ header img{
 .header{
 	background-image: url("../assets/pattern/pattern_02.gif");
 	padding: 0;
+	margin: 0;
+	top: 0;
 	width: 100%;
 	height: 60px;
+	position: fixed;
 }
 
 #center{
-	padding: 0 20px;
+	padding: 60px 20px 0;
 	margin: 8px;
 }
 
@@ -235,6 +238,23 @@ input::-webkit-inner-spin-button {
 	margin: 2px 0 0;
 }
 
+h2{
+	display: none;
+}
+
+.confirmation_icon{
+	width: 15px;
+	height: 15px;
+	overflow: hidden;
+	position: absolute;
+	top: 305px;
+	left: 260px;
+}
+
+.user_confirmation{
+	margin-left: -310px;
+}
+
 /* Large desktop */
 @media (min-width: 1200px) {
 
@@ -252,12 +272,12 @@ input::-webkit-inner-spin-button {
 
 .login_form{
 	border-left: none;
+	border-top: solid 3px #e85b1f;
 	padding: 0;
 }
 
 .register_form, .login_form{
 	width: auto;
-	/*float: left;*/
 }
 
 }
@@ -265,18 +285,43 @@ input::-webkit-inner-spin-button {
 /* Landscape phones and down */
 @media (max-width: 480px) {
 
+h1{
+	display: none;
+}
+
+h2{
+	display: block;
+}
+
+.register_form{
+	padding-top: 10px;
+}
+
 p, label{
 	font-size: 16px;
 }
 
 header img{
-	margin: 5px 100px;
+	margin: 5px 70px;
+}
+
+header.loggedin_header{
+	position: none;
 }
 
 .logout{
 	float: left;
-	width: 70px;
+	width: 40px;
 	padding-left: 5px;
+	font-size: 0px;
+	background-color: #e85b1f;
+	background-image: url("../assets/img/glyphicons-halflings.png");
+	background-size: 700px;
+	background-position: -457px 3px;
+}
+
+.logout:active{
+	background-image: url("../assets/img/glyphicons-halflings-white.png");
 }
 
 .card_info p{
@@ -311,6 +356,10 @@ header img{
 
 .favorites_icon{
 	background-position: -128px 12px;
+}
+
+.confirmation_icon{	
+	top: 265px;
 }
 
 }

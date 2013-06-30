@@ -1,5 +1,5 @@
 	<h1>Welcome to fsRecordings!</h1>
-	
+	<h2>Register now!</h2>
 
 	<div class="register_form">
 
@@ -23,10 +23,13 @@
 				</div>
 				<div>
 					<label>SoundCloud Username:</label><br />
-					<input type="text" name="r_username" placeholder="SoundCloud Username"/>
+					<input type="text" class="r_username" name="r_username" placeholder="SoundCloud Username"/>
+					<div class="confirmation_icon">
+						<img class="user_confirmation" src="">
+					</div>
 				</div>
 				
-				<input class="button" type="submit" name="launch" value="LAUNCH"/>
+				<input class="button r_launch" type="submit" name="launch" value="LAUNCH"/>
 			</form>
 		</div>
 
@@ -34,15 +37,15 @@
 
 	<div class="login_form">
 
-	<div class="username_form">
-		<p>Already a user? Login with your SoundCloud username below.</p>
-		<form method="post" enctype="multipart/form-data" action="?controllers=login&action=login">
-			<div>
-				<input type="text" name="l_username" placeholder="SoundCloud Username"/>
-			</div>
-			<input class="button" type="submit" name="send" value="LAUNCH"/>
-		</form>
-	</div>
+		<div class="username_form">
+			<p>Already a user? Login with your SoundCloud username below.</p>
+			<form method="post" enctype="multipart/form-data" action="?controllers=login&action=login">
+				<div>
+					<input type="text" class="l_username" name="l_username" placeholder="SoundCloud Username"/>
+				</div>
+				<input class="button l_launch" type="submit" name="send" value="LAUNCH"/>
+			</form>
+		</div>
 
 	</div>
 

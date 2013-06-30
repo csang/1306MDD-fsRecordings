@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<header>
+	<header <? if($_SESSION["loggedin"] == 1){ ?> class="loggedin_header" <? }?> >
 		<div class="header">
 			<img src="assets/logo/logo_01.png" />
 			<? if($_SESSION["loggedin"] == 1){ ?>

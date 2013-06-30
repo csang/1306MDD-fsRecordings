@@ -37,10 +37,6 @@
 			
 			include 'controllers/image.php';	
 		
-		}elseif($_GET["controllers"] == "mail"){
-			
-			include 'controllers/mail.php';	
-		
 		}
 		
 	}else{

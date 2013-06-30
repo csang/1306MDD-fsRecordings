@@ -22,6 +22,9 @@
 
 	if(!empty($_GET['action'])){
 
+////////////////////////////////////////////////////////////////////////
+// === When updating user info
+////////////////////////////////////////////////////////////////////////
 		if($_GET["action"] == "update"){ // If the user is updating his info
 			if(isset($_POST["email2"]) || isset($_POST["name"])){
 				$userModel->update($_POST["name"],$_POST["email1"],$_POST["email2"],$_SESSION["user"][0]["username"],$db);
@@ -32,6 +35,10 @@
 				$views->getFile("views/header.php");
 				$views->getFile("views/home.php");	
 			};
+
+////////////////////////////////////////////////////////////////////////
+// === When Deleting user
+////////////////////////////////////////////////////////////////////////
 		}elseif($_GET["action"] == "delete"){ // If the user want to delete his profile
 			$userModel->delete($_SESSION["user"][0]["username"],$db);
 			session_destroy();
